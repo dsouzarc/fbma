@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ryan.fbma" >
+          package="com.ryan.fbma"
+          android:versionCode="1"
+          android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +19,31 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".InboxActivity"
+            android:label="@string/title_activity_inbox" >
+        </activity>
+        <activity
+            android:name=".AnalyzeThreadActivity"
+            android:label="@string/title_activity_thread" >
+        </activity>
+        <activity
+            android:name=".AllMessagesActivity"
+            android:label="@string/title_activity_all_messages" >
+        </activity>
+        <activity
+            android:name=".AnalyzeMessagesActivity"
+            android:label="@string/title_activity_analyze_messages" >
         </activity>
     </application>
 
